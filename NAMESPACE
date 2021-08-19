@@ -2,6 +2,7 @@
 
 export(get_all)
 export(is_proxy)
+export(lookup_web_service)
 export(open)
 import(jsonlite)
 import(reticulate)
