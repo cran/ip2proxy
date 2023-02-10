@@ -4,7 +4,7 @@
 \alias{lookup_web_service}
 \title{Lookup for IP address proxy information using IP2Proxy web service.}
 \usage{
-lookup_web_service(api_key, ip, package)
+lookup_web_service(api_key, ip, package = "PX1")
 }
 \arguments{
 \item{api_key}{IP2Proxy web service API key}
@@ -20,8 +20,8 @@ Return all the proxy information about the IP address
 Find the country, region, city, ISP, domain name, usage types, asn, as name, last seen, threat type and provider. The return values will be depending on the IP2Proxy web service package used.
 }
 \examples{
-\donttest{
-lookup_web_service("8.8.8.8")
+\dontrun{
+lookup_web_service("1.0.241.135","PX1")
 }
 
 }

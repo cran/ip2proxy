@@ -5,7 +5,7 @@
 #' @return NULL
 #' @import reticulate
 #' @export
-#' @examples \donttest{
+#' @examples \dontrun{
 #' open("~/IP-COUNTRY.BIN")
 #' }
 #'
@@ -25,8 +25,8 @@ open <- function(bin_location){
 #' @import reticulate
 #' @import jsonlite
 #' @export
-#' @examples \donttest{
-#' get_all("8.8.8.8")
+#' @examples \dontrun{
+#' get_all("1.0.241.135")
 #' }
 #'
 
@@ -45,8 +45,8 @@ get_all <- function(ip){
 #' @import reticulate
 #' @import jsonlite
 #' @export
-#' @examples \donttest{
-#' is_proxy("8.8.8.8")
+#' @examples \dontrun{
+#' is_proxy("1.0.241.135")
 #' }
 #'
 
@@ -69,12 +69,12 @@ is_proxy <- function(ip){
 #' @import reticulate
 #' @import jsonlite
 #' @export
-#' @examples \donttest{
-#' lookup_web_service("8.8.8.8")
+#' @examples \dontrun{
+#' lookup_web_service("1.0.241.135","PX1")
 #' }
 #'
 
-lookup_web_service <- function(api_key, ip, package){
+lookup_web_service <- function(api_key, ip, package = 'PX1'){
   py_run_string("import IP2Proxy")
   py_run_string("import json")
   ws_initialize = paste("ws = IP2Proxy.IP2ProxyWebService('", api_key, "','", package, "',True)", sep = "")
